@@ -5,6 +5,7 @@
 #include "Graph.h"
 #include <limits.h>
 #include <queue>
+#include <algorithm>
 
 class
 {
@@ -56,11 +57,12 @@ void Graph::remove_link(int from, int to) {
         throw;
     }
 
-    remove(nodes[from].begin(), nodes[from].end(), to);
+    nodes[from].erase(find(nodes[from].begin(), nodes[from].end(), to));
 }
 
 void Graph::add_link(int from, int to) {
-    nodes[from].push_back(to);
+    if (!contains(nodes[from], to))
+        nodes[from].push_back(to);
 }
 
 Graph::Graph(int nbNodes) {

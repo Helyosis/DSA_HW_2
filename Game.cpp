@@ -28,7 +28,7 @@ void Game::print() {
             if (contains(obstacles, {x, y})) {
                 cout << OBSTACLE_ICON;
             }
-            if (x == playerX && y == playerY) {
+            else if (x == playerX && y == playerY) {
                 cout << PLAYER_ICON;
             } else if (x == objectiveX && y == objectiveY) {
                 cout << OBJECTIVE_ICON;
@@ -84,4 +84,8 @@ pair<int, int> Game::node_to_coord(int n) const {
 void Game::add_obstacle(pair<int, int> coord) {
     graph.remove_node(coord_to_node(coord));
     obstacles.push_back(coord);
+}
+
+bool Game::game_is_running() {
+    return !(playerX == objectiveX && playerY == objectiveY);
 }

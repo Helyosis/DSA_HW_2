@@ -1,0 +1,3 @@
+/home/helyosis/Documents/Algebra schoolwork/Project/cmake-build-debug/CMakeFiles/Project.dir
+/home/helyosis/Documents/Algebra schoolwork/Project/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/helyosis/Documents/Algebra schoolwork/Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

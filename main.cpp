@@ -40,9 +40,11 @@ int main() {
         game.add_obstacle({obstacleX, obstacleY});
     }
 
-    while (true) {
+    while (game.game_is_running()) {
         game.print();
         game.next_step();
         sleep(1);
     }
+    game.print();
+
 }

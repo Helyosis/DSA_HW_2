@@ -30,6 +30,7 @@ public:
     void next_step();
     void print();
     void add_obstacle(pair<int, int> obstacleCoord);
+    bool game_is_running();
 };
 
 
